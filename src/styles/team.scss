@@ -1,0 +1,33 @@
+@import "./variables.scss";
+
+#team {
+  background-color: $khaki;
+
+  .hover {
+    @apply bg-black;
+    transition: all 0.5s;
+    transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  .hover:hover {
+    transform: scale(1.05) rotateX(14deg) rotateY(0deg) rotateZ(10deg);
+  }
+  .team-name {
+    font-size: 32px;
+    color: $dark-khaki;
+    text-transform: uppercase;
+  }
+  @media (min-width: 1024px) {
+    padding: 50px 0 80px 0;
+    .team-name {
+      font-size: 40px;
+    }
+    .heading {
+      font-size: 80px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .heading {
+      font-size: 120px;
+    }
+  }
+}

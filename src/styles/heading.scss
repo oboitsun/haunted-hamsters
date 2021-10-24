@@ -1,0 +1,9 @@
+.heading {
+  font-size: 48px;
+  @media (min-width: 1024px) {
+    font-size: 100px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 120px;
+  }
+}

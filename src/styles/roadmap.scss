@@ -1,0 +1,66 @@
+@import "./variables.scss";
+#roadmap {
+  background: $khaki;
+  .milestone-wrapper {
+    place-items: center;
+    display: grid;
+
+    column-gap: 40px;
+  }
+  .ltr {
+    grid-template-columns: 30% 1fr;
+  }
+  .rtl {
+    grid-template-columns: 1fr 30%;
+  }
+  .date-pumpkin {
+    width: 100%;
+    position: relative;
+  }
+  .date {
+    font-size: clamp(40px, 10vw, 162px);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .milestone-text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  @media (min-width: 1024px) {
+    .ltr {
+      grid-template-columns: 37% 1fr;
+    }
+    .rtl {
+      grid-template-columns: 1fr 37%;
+    }
+    .part {
+      display: grid;
+      grid-template-columns: 1.2fr 1.5fr;
+      column-gap: 40px;
+      place-items: center;
+      padding-bottom: 20px;
+    }
+    .part:nth-of-type(2n) {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+    }
+    .part-pet:nth-of-type(2n) {
+      grid-column-start: 1;
+      grid-row-start: 1;
+    }
+    .milestone-text {
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .milestone-text {
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+}
