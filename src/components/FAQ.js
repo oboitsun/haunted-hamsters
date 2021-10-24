@@ -21,7 +21,6 @@ export default function FAQ() {
           </SubHeading>
           <div className="flex flex-col  auto-rows-auto ">
             <div className="faq-divider"></div>
-
             {faqs.map((f, i) => (
               <FaqItem key={i} {...f} />
             ))}
