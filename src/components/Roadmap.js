@@ -51,7 +51,7 @@ export default function Roadmap() {
             )}
           </div>
           <div className="">
-            <img src="/imgs/mummy-hamster.png" alt="mummy" />
+            <img src="/imgs/hamm.png" alt="Mummy Ham" />
           </div>
         </div>
         <div className="part">
