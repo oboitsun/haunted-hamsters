@@ -4,7 +4,6 @@ export default function NFTCarousel() {
   const nfts = [
     "/imgs/franken-big.png",
     "/imgs/rockstar-ham.png",
-
     "/imgs/nft-ham1.png",
     "/imgs/nft-ham2.png",
     "/imgs/nft-ham3.png",
@@ -19,10 +18,10 @@ export default function NFTCarousel() {
           animate={{ opacity: [0, 1, 0] }}
           transition={{
             duration: 3,
-            repeat: true,
+            repeat: "Infinity",
             repeatType: "loop",
             delay: i * 3,
-            repeatDelay: (nfts.length - 1) * 3,
+            repeatDelay: nfts.length * 3 - 3,
           }}
           className="absolute w-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           src={m}
