@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/hero-section.scss";
 import WelcomeTo from "./WelcomeTo";
-
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 export default function HeroSection({
   showPopup,
   setShowPopup,
@@ -9,8 +9,12 @@ export default function HeroSection({
   connectStoic,
   connectWallet,
 }) {
+  const { scrollYProgress } = useViewportScroll();
+
+  const yPosAnim = useTransform(scrollYProgress, [0, 0.1, 0.5], [0, -500, -900]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.5], [1, 0.5, 0.0]);
   return (
-    <div
+    <motion.div
       id="hero-section"
       className="relative overflow-hidden flex flex-col lg:flex-row items-center lg:justify-end"
     >
@@ -27,8 +31,14 @@ export default function HeroSection({
           connectWallet={connectWallet}
           userAddress={userAddress}
         />
-        <img className="big-frank " src="/imgs/franken-big.png" alt="big ham" />
+        <motion.img
+          style={{ x: yPosAnim, opacity }}
+          className="big-frank  "
+          src="/imgs/franken-big.png"
+          alt="big ham"
+        />
+        <img className=" big-frank-mob" src="/imgs/franken-big.png" alt="big ham" />
       </div>
-    </div>
+    </motion.div>
   );
 }

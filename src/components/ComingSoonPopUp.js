@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 
 export default function ComingSoonPopUp({ showPopup, setShowPopup }) {
-  console.log(showPopup);
   useEffect(() => {
     setTimeout(() => {
       setShowPopup(false);

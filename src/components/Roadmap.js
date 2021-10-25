@@ -1,7 +1,8 @@
 import React from "react";
 import "./../styles/roadmap.scss";
 import Heading from "./Heading";
-import Web from "./Web";
+import NFTCarousel from "./NFTCarousel";
+
 const roadmap = [
   {
     direction: "ltr",
@@ -79,7 +80,7 @@ export default function Roadmap() {
             )}
           </div>
           <div className="part-pet hover:scale-110 transform transition-transform ">
-            <img src="/imgs/franken.png" alt="franken" />
+            <NFTCarousel />
           </div>
         </div>
       </div>

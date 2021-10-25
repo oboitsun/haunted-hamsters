@@ -30,9 +30,21 @@
   .join-discord {
     background: $dark-khaki;
   }
+
   .big-frank {
+    display: none;
     max-width: unset;
-    display: block;
+
+    width: 120%;
+    max-width: 450px;
+    position: relative;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .big-frank-mob {
+    max-width: unset;
+
     width: 120%;
     max-width: 450px;
     position: relative;
@@ -44,11 +56,15 @@
   @media (min-width: 1024px) {
     padding-top: 0;
     .big-frank {
+      display: block;
       position: absolute;
       max-width: 69%;
       bottom: -126%;
       left: -10%;
       transform: unset;
+    }
+    .big-frank-mob {
+      display: none;
     }
     .welcome-to {
       width: 60%;
