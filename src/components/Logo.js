@@ -23,14 +23,8 @@ export default function Logo({ wide }) {
     hidden: { scale: 0, opacity: 0, pathLength: 1, transition: { duration: 1 } },
   };
   return (
-    <Anchor to="top" {...linkProps} className="block w-[93px] lg:w-[139px] xl:w-[183px]">
-      <img
-        src="/imgs/logo.png"
-        layout="responsive"
-        width={183}
-        height={71}
-        alt="SNEAKER BEARS"
-      />
+    <Anchor to="top" {...linkProps} className="block">
+      <img src="/imgs/hamster-logo.png" layout="responsive" alt="SNEAKER BEARS" />
     </Anchor>
   );
 }

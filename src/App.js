@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import FAQ from "./components/FAQ";
-// import Header from "./components/Header";
+import "./styles/common.scss";
 import HeroSection from "./components/HeroSection";
 import EndlessHamsters from "./components/EndlessHamsters";
 import Team from "./components/Team";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ModalMenu from "./components/ModalMenu";
 import ComingSoonPopUp from "./components/ComingSoonPopUp";
 
 import AboutHamsters from "./components/AboutHamsters";
 import Roadmap from "./components/Roadmap";
+import Ghost from "./components/Ghost";
+import Web from "./components/Web";
 
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
@@ -62,44 +65,46 @@ export default function App() {
   };
   const [showPopup, setShowPopup] = useState(false);
   return (
-    <div className=" relative overflow-hidden">
+    <div className=" relative overflow-hidden app">
       <div id="top"></div>
+      <Ghost />
 
-      <div className="w-full h-full max-h-[854px] lg:pb-10 relative  overflow-hidden">
-        {/* <Header
-          showPopup={showPopup}
-          setShowPopup={setShowPopup}
-          connectStoic={connectStoic}
-          connectWallet={connectWallet}
-          userAddress={userAddress}
-          showMenu={showMenu}
-          setShowMenu={setShowMenu}
-          scrolled={scrolled}
-        /> */}
-        <div className="w-full relative z-[1]">
-          {/* <HeroSection
-            showPopup={showPopup}
-            setShowPopup={setShowPopup}
-            connectStoic={connectStoic}
-            connectWallet={connectWallet}
-            userAddress={userAddress}
-          /> */}
-        </div>
-      </div>
-      <AboutHamsters />
-      <EndlessHamsters />
-      <Roadmap />
-      <Team />
-
-      <FAQ />
-
-      {/* <Footer
+      <Header
         showPopup={showPopup}
         setShowPopup={setShowPopup}
         connectStoic={connectStoic}
         connectWallet={connectWallet}
         userAddress={userAddress}
-      /> */}
+        showMenu={showMenu}
+        setShowMenu={setShowMenu}
+        scrolled={scrolled}
+      />
+
+      <HeroSection
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+        connectStoic={connectStoic}
+        connectWallet={connectWallet}
+        userAddress={userAddress}
+      />
+
+      <AboutHamsters />
+      <div className="relative">
+        <EndlessHamsters />
+        <Web />
+      </div>
+      <Roadmap />
+      <Team />
+
+      <FAQ />
+
+      <Footer
+        showPopup={showPopup}
+        setShowPopup={setShowPopup}
+        connectStoic={connectStoic}
+        connectWallet={connectWallet}
+        userAddress={userAddress}
+      />
 
       <ComingSoonPopUp showPopup={showPopup} setShowPopup={setShowPopup} />
       <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />

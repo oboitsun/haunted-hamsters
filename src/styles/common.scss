@@ -1,0 +1,78 @@
+@import "./variables.scss";
+.app {
+  .btn {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    background: black;
+    padding: 12px 40px;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+  }
+  .btn:hover {
+    background: #9e9171;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  .outlined {
+    border: 1px solid white;
+    background: transparent;
+  }
+  .ghost {
+    position: absolute;
+    right: 10%;
+    top: 700px;
+    width: 20%;
+    z-index: 10;
+  }
+  .web {
+    z-index: 0 !important;
+    position: absolute;
+    left: 0;
+    transform: translateX(-50%) translateY(-50%);
+    top: 30%;
+    width: 30%;
+    z-index: 10;
+  }
+  .web-r {
+    z-index: 0 t;
+    position: absolute;
+    right: 0;
+    transform: translateX(50%) translateY(50%);
+    bottom: 20%;
+    width: 40%;
+    z-index: 10;
+  }
+
+  .anchor {
+    @apply cursor-pointer  font-bold  transform transition-all;
+  }
+  .anchor:hover {
+    color: $dark-khaki;
+    transform: scale(1.1);
+  }
+  .socials-icon {
+    display: block;
+    color: $dark-khaki;
+    transition: all 0.5s ease-in-out;
+  }
+  .socials-icon:hover {
+    color: $khaki;
+  }
+  .footer .socials-icon:hover {
+    color: black;
+  }
+  .footer .outlined {
+    border-color: black;
+    color: black;
+    background: transparent;
+  }
+  .footer .outlined:hover {
+  }
+  @media (min-width: 1024px) {
+  }
+
+  @media (min-width: 1280px) {
+  }
+}

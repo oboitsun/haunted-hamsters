@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../styles/hero-section.scss";
 import WelcomeTo from "./WelcomeTo";
 
 export default function HeroSection({
@@ -10,8 +10,16 @@ export default function HeroSection({
   connectWallet,
 }) {
   return (
-    <div className="relative z-[1] pt-[100px] lg:max-w-864 mx-auto xl:max-w-1080  px-10 lg:px-0 pb-10">
-      <div className="flex lg:flex-row flex-col items-center">
+    <div
+      id="hero-section"
+      className="relative overflow-hidden flex flex-col lg:flex-row items-center lg:justify-end"
+    >
+      <img
+        className="absolute w-full h-full top-0 left-0 object-cover opacity-50"
+        src="/imgs/bg.png"
+        alt="bg"
+      />
+      <div className="my-container relative z-10  lg:flex lg:justify-end">
         <WelcomeTo
           showPopup={showPopup}
           setShowPopup={setShowPopup}
@@ -19,6 +27,7 @@ export default function HeroSection({
           connectWallet={connectWallet}
           userAddress={userAddress}
         />
+        <img className="big-frank " src="/imgs/franken-big.png" alt="big ham" />
       </div>
     </div>
   );

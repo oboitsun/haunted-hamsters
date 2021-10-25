@@ -1,0 +1,41 @@
+.endless-hamsters {
+  padding-bottom: 100px;
+
+  li {
+    padding: 0 10px;
+  }
+
+  .pic {
+    display: block;
+    width: 100%;
+    z-index: 10;
+  }
+  li:nth-child(n + 4) {
+    display: none;
+  }
+
+  .endless {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    width: 200%;
+    animation: bannermove 20s linear infinite;
+  }
+
+  .hams1 {
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  @media (min-width: 1024px) {
+    li:nth-child(n + 4) {
+      display: block;
+    }
+  }
+}

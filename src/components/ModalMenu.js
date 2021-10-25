@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// import dynamic from "next/dynamic";
+import "../styles/modal-menu.scss";
 import { Link as Anchor } from "react-scroll";
 import Socials from "./Socials";
 import ConnectWallet from "./ConnectWallet";
-// const DynamicComponent = dynamic(() => import("./ConnectWalletMob"), { ssr: false });
+
 export default function ModalMenu({ showMenu, setShowMenu }) {
   const links = [
     { href: "about-us", text: "About Us" },
@@ -46,7 +46,7 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
       variants={cont}
       initial="hidden"
       animate={showMenu ? "show" : "hidden"}
-      className="bg-crmsn w-full z-20 fixed h-screen top-0 bottom-0 px-10 py-10 flex flex-col justify-between   lg:hidden pt-[122px]"
+      className="modal-menu"
     >
       {links.map((l, i) => (
         <motion.div key={i} variants={item} className="text-3xl mb-5">

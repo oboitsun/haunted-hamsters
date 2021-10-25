@@ -24,25 +24,18 @@ export default function WelcomeTo({
     hidden: { x: "-60vw", opacity: 0, transition: { duration: 1 } },
   };
   return (
-    <motion.div
-      variants={cont}
-      initial="hidden"
-      animate="show"
-      className="text-[32px] lg:text-[40px] lg:leading-[48px] leading-9 xl:text-[64px] xl:leading-[77px] font-extrabold text-yellow-500 w-full lg:w-[40%] xl:w-[50%] flex-shrink-0"
-    >
-      <motion.p variants={item} key={1} className="text-white uppercase">
+    <motion.div variants={cont} initial="hidden" animate="show" className="welcome-to ">
+      <motion.p variants={item} key={1} className="title  font-fright">
         Welcome to
       </motion.p>
-      <motion.p variants={item} key={2} className="uppercase">
-        THE skater
+      <motion.p variants={item} key={2} className="title font-fright">
+        THE Haunted hamsters
       </motion.p>
-      <motion.p variants={item} key={3} className="uppercase">
-        bears
-      </motion.p>
+
       <motion.div variants={item} key={4}>
         <Timer />
       </motion.div>
-      <motion.div variants={item} key={5} className="flex justify-start">
+      <motion.div variants={item} key={5} className="w-full grid gap-8 lg:grid-cols-2">
         <ConnectWallet
           showPopup={showPopup}
           setShowPopup={setShowPopup}
@@ -50,6 +43,9 @@ export default function WelcomeTo({
           connectWallet={connectWallet}
           userAddress={userAddress}
         />
+        <a className="btn join-discord" href="https://discord.com">
+          Join The Discord
+        </a>
       </motion.div>
     </motion.div>
   );

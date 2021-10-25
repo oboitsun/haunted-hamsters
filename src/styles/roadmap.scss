@@ -14,11 +14,14 @@
     grid-template-columns: 1fr 30%;
   }
   .date-pumpkin {
+    z-index: 10;
     width: 100%;
     position: relative;
   }
   .date {
-    font-size: clamp(40px, 10vw, 162px);
+    transition: all 0.4s;
+    animation: text-color 15s 5s ease-in infinite;
+    font-size: clamp(40px, 10vw, 122px);
     position: absolute;
     top: 60%;
     left: 50%;
@@ -62,5 +65,19 @@
       font-size: 20px;
       line-height: 40px;
     }
+  }
+}
+@keyframes text-color {
+  0% {
+    color: black;
+  }
+  25% {
+    color: $khaki;
+  }
+  50% {
+    color: $dark-khaki;
+  }
+  100% {
+    color: black;
   }
 }

@@ -3,6 +3,8 @@ import FaqItem from "./FaqItem";
 import "../styles/faq.scss";
 import Heading from "./Heading";
 import SubHeading from "./SubHeading";
+import { motion } from "framer-motion";
+
 const faqs = [
   { qstn: "How do I buy a Haunted Hamsters?", answr: "The Answer" },
   { qstn: "What Blockhain and technology are Haunted Hamsters on?", answr: "The Answer" },
@@ -27,7 +29,20 @@ export default function FAQ() {
           </div>
         </div>
         <div className="devil">
-          <img src="/imgs/devil.png" alt="devil" />
+          <motion.img
+            initial={{ x: 0, y: 0 }}
+            animate={{ x: [0, 15, 0], y: [0, -24, 25, 0] }}
+            transition={{
+              delay: 0.3,
+              repeatDelay: 0.3,
+              repeatType: "reverse",
+              repeat: "Infinity",
+              ease: "easeOut",
+              duration: 7,
+            }}
+            src="/imgs/devil.png"
+            alt="devil"
+          />
         </div>
       </div>
     </div>

@@ -1,0 +1,22 @@
+@import "./variables.scss";
+.modal-menu {
+  z-index: 20;
+  background-color: $dark-khaki;
+  width: 100%;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  padding-top: 122px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+  }
+}

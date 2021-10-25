@@ -1,6 +1,7 @@
 import React from "react";
 import "./../styles/roadmap.scss";
 import Heading from "./Heading";
+import Web from "./Web";
 const roadmap = [
   {
     direction: "ltr",
@@ -25,7 +26,8 @@ const roadmap = [
 ];
 export default function Roadmap() {
   return (
-    <div id="roadmap">
+    <div id="roadmap" className="relative">
+      <img className="web-r" src="imgs/web-r.png" alt="web" />
       <div className="my-container">
         <Heading>roadmap</Heading>
         <div className="part">
@@ -50,7 +52,7 @@ export default function Roadmap() {
                 )
             )}
           </div>
-          <div className="">
+          <div className="hover:scale-110 transform transition-transform">
             <img src="/imgs/hamm.png" alt="Mummy Ham" />
           </div>
         </div>
@@ -76,7 +78,7 @@ export default function Roadmap() {
                 )
             )}
           </div>
-          <div className="part-pet ">
+          <div className="part-pet hover:scale-110 transform transition-transform ">
             <img src="/imgs/franken.png" alt="franken" />
           </div>
         </div>

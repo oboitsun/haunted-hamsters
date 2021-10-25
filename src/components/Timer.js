@@ -22,7 +22,7 @@ export default function Timer() {
   });
   return (
     <div className=" flex items-center  mb-4 lg:mb-6 lg:mt-4">
-      <p className="font-medium text-white text-xs flex-shrink-0 pr-4">
+      <p className="font-medium text-white  flex-shrink-0 pr-4">
         Time till
         <br /> launch:
       </p>

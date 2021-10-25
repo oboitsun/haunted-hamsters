@@ -16,7 +16,7 @@ const team = [
     position: "Artist",
   },
   {
-    src: "/imgs/ham6.png",
+    src: "/imgs/ham1.png",
     name: "Sunny",
     position: "Artist",
   },
