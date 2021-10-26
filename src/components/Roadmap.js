@@ -6,23 +6,26 @@ import NFTCarousel from "./NFTCarousel";
 const roadmap = [
   {
     direction: "ltr",
-    month: "JUL",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "JULY ",
+    text: `The vision of Haunted Hamsters begins, and preparation for the project is
+    underway.`,
   },
   {
     direction: "ltr",
-    month: "AUG",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "AUG ",
+    text: `Development, design is underway for the project and the first set of
+    Hamsters start to be minted!`,
   },
   {
     direction: "rtl",
-    month: "OCT",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "OCT ",
+    text: `The final amount of Hamsters are minted and are now available on the
+    marketplace.`,
   },
   {
     direction: "rtl",
-    month: "NOV",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "NOV ",
+    text: `Future development, airdrops, rewards and potential game is in the works.`,
   },
 ];
 export default function Roadmap() {

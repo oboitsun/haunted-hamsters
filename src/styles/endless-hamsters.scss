@@ -21,7 +21,9 @@
     width: 200%;
     animation: bannermove 20s linear infinite;
   }
-
+  .endless:hover {
+    animation-play-state: paused;
+  }
   .hams1 {
     width: 100%;
   }

@@ -8,9 +8,9 @@ export default function AboutHamsters() {
       <div className="my-container">
         <Heading>What is haunted hamsters</Heading>
         <SubHeading>
-          Haunted Hamsters is a game centered around breedable, and oh-so-adorable
-          creatures we call Haunted Hamsters! Each cat is one-of-a-kind and 100% owned by
-          you; it cannot be replicated, taken away, or destroyed.
+          Haunted Hamsters are 8888 hamsters, who have been haunted on the hill of
+          Hamsterville. They come with various traits, and are now living on the
+          blockchain ready to be adopted.
         </SubHeading>
       </div>
     </div>

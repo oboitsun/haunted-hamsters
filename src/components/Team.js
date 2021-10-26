@@ -7,23 +7,23 @@ import Heading from "./Heading";
 const team = [
   {
     src: "/imgs/ham4.png",
-    name: "Hiro",
-    position: "Developer",
+    name: "Fuzz",
+    position: "CEO",
   },
   {
     src: "/imgs/ham5.png",
-    name: "Error",
-    position: "Artist",
+    name: "Brownie",
+    position: "Marketing",
   },
   {
     src: "/imgs/ham1.png",
-    name: "Sunny",
-    position: "Artist",
+    name: "Ice Cup",
+    position: "Developer",
   },
   {
     src: "/imgs/ham7.png",
-    name: "mdk",
-    position: "Promotion",
+    name: "Breeze",
+    position: "Designer",
   },
 ];
 export default function Team() {
@@ -52,8 +52,7 @@ export default function Team() {
       <div className="my-container">
         <Heading>team</Heading>
         <SubHeading>
-          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text ever since the 1500s
+          Some of the Haunted Hamsters who have joined forces to make this happen…
         </SubHeading>
         <motion.div
           variants={cont}
