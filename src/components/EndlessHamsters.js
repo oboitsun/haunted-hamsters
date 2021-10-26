@@ -24,21 +24,29 @@ export default function EndlessHamsters() {
                 />
               </li>
             ))}
+            <li className="" key={100}>
+              <img
+                className={`relative z-10 pic hidden 2xl:block`}
+                src="/imgs/ham5.png"
+                alt="ham"
+              />
+            </li>
           </ul>
         </div>
         <div className="hams">
           <ul>
-            <ul>
-              {hamsters.map((h, i) => (
-                <li key={i}>
-                  <img
-                    className={`pic ${i > 3 && "hidden lg:block"}`}
-                    src={h}
-                    alt="ham"
-                  />
-                </li>
-              ))}
-            </ul>
+            {hamsters.map((h, i) => (
+              <li key={i}>
+                <img className={`pic ${i > 3 && "hidden lg:block"}`} src={h} alt="ham" />
+              </li>
+            ))}
+            <li className="" key={100}>
+              <img
+                className={`relative z-10 pic hidden 2xl:block`}
+                src="/imgs/ham5.png"
+                alt="ham"
+              />
+            </li>
           </ul>
         </div>
       </div>

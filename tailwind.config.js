@@ -20,6 +20,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        crimson: "#E0842A",
         khaki: "#9E9171",
         grey: "#808080",
         drkGray: "#D4D4D4",

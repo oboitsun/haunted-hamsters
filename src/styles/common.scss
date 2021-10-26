@@ -1,11 +1,13 @@
 @import "./variables.scss";
 .app {
   .btn {
+    display: block;
     text-align: center;
     width: 100%;
     font-size: 14px;
     background: black;
-    padding: 12px 40px;
+    height: 100%;
+    padding: 12px 40px !important;
     color: #fff;
     font-weight: 700;
     transition: all 0.3s ease-in-out;
@@ -14,6 +16,10 @@
     background: #9e9171;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
+  }
+  .btn-mint,
+  .btn-mint:hover {
+    background: #e0842a;
   }
   .outlined {
     border: 1px solid white;

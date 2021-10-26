@@ -38,18 +38,13 @@ export default function Header({
     className: "anchor text-white ",
   };
   return (
-    <div
-      id="header"
-      className={`w-full   px-10 lg:px-0 transition-all duration-500   fixed top-0 left-0 z-30 ${
-        scrolled ? "bg-black py-3 shadow-lg" : "py-[30px]"
-      }`}
-    >
-      <div className="max-w-864 xl:max-w-1080 mx-auto justify-between flex items-center">
+    <div id="header" className={` ${scrolled ? "bg-black py-3 shadow-lg" : "py-7"}`}>
+      <div className="my-container justify-between flex items-center">
         <div>
           <Logo wide={false} />
         </div>
         <Burger showMenu={showMenu} setShowMenu={setShowMenu} />
-        <div className="hidden lg:flex text-xs xl:text-base font-bold lg:gap-8 xl:gap-10 items-center">
+        <div className="hidden lg:flex text-xs xl:text-base font-bold lg:gap-6   xl:gap-10 items-center">
           {links.map((l, i) => (
             <Anchor key={i} to={l.href} {...linkProps}>
               {l.text}
