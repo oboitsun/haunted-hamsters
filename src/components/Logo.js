@@ -24,7 +24,12 @@ export default function Logo({ wide }) {
   };
   return (
     <Anchor to="top" {...linkProps} className="block">
-      <img src="/imgs/hamster-logo.png" layout="responsive" alt="SNEAKER BEARS" />
+      <img
+        className="logo"
+        src="/imgs/hamster-logo.png"
+        layout="responsive"
+        alt="SNEAKER BEARS"
+      />
     </Anchor>
   );
 }

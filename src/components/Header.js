@@ -35,7 +35,7 @@ export default function Header({
     offset: -100,
     duration: 500,
     activeClass: "active",
-    className: "anchor text-white ",
+    className: "anchor text-white min-w-max",
   };
   return (
     <div id="header" className={` ${scrolled ? "bg-black py-3 shadow-lg" : "py-7"}`}>
