@@ -35,7 +35,11 @@ export default function WelcomeTo({
       <motion.div variants={item} key={4}>
         <Timer />
       </motion.div>
-      <motion.div variants={item} key={5} className="w-full grid gap-8 lg:grid-cols-2">
+      <motion.div
+        variants={item}
+        key={5}
+        className="w-full flex flex-col lg:flex-row gap-8 "
+      >
         <ConnectWallet
           showPopup={showPopup}
           setShowPopup={setShowPopup}
