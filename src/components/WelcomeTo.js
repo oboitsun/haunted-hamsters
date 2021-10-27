@@ -43,8 +43,8 @@ export default function WelcomeTo({
           connectWallet={connectWallet}
           userAddress={userAddress}
         />
-        <a className="btn join-discord" href="https://discord.com">
-          Join The Discord
+        <a href="https://discord.com">
+          <button className="btn join-discord"> Join The Discord</button>
         </a>
       </motion.div>
     </motion.div>
