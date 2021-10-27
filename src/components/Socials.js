@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Socials({ big = false }) {
+export default function Socials({ big = false, modal = false }) {
   return (
-    <div className="flex gap-6">
+    <div className={`flex gap-6 ${modal && "modal"}`}>
       <a className={`socials-icon ${big ? "w-10" : "w-5"}`} href="https://instagram.com">
         <svg
           className="fill-current w-full"

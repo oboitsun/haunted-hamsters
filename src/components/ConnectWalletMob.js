@@ -11,8 +11,8 @@ import {
   ChakraProvider,
 } from "@chakra-ui/react";
 
-function ConnectWalletMob() {
-  const [userAddress, setUserAddress] = useState("");
+function ConnectWalletMob({ header, userAddress, setUserAddress }) {
+  // const [userAddress, setUserAddress] = useState("");
   const connectWallet = async () => {
     if (window) {
       // Canister Ids
@@ -46,6 +46,24 @@ function ConnectWalletMob() {
     }
   };
 
+  const eventCallback = (resolve) => {
+    if (window.earth) {
+      resolve(window.earth);
+      window.removeEventListener("load", eventCallback(resolve));
+    } else {
+      window.alert("Earth Wallet not installed.");
+      window.removeEventListener("load", eventCallback);
+    }
+  };
+
+  const injectEarth = () => {
+    return new Promise((resolve, reject) => {
+      window.addEventListener("load", eventCallback(resolve));
+      const event = new Event("load");
+      window.dispatchEvent(event);
+    });
+  };
+
   return (
     <ChakraProvider>
       <div className="connect-wallet">
@@ -57,6 +75,10 @@ function ConnectWalletMob() {
             <div className="spacer" />
             <Button className="wallet-connect-button" onClick={connectStoic}>
               <img className="icon-logo" src="/imgs/stoic-logo.png" /> Connect with Stoic
+            </Button>
+            <div className="spacer" />
+            <Button className="wallet-connect-button" onClick={connectStoic}>
+              <img className="icon-logo" src="/imgs/earth-logo.jpg" /> Connect with Earth
             </Button>
           </>
         ) : (

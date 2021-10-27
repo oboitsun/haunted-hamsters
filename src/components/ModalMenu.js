@@ -25,7 +25,8 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
   const cont = {
     show: {
       height: "100vh",
-      x: 0,
+      zIndex: 20,
+      opacity: 1,
       transition: {
         duration: 0.4,
         staggerChildren: 0.1,
@@ -34,13 +35,11 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
     },
     hidden: {
       height: "100vh",
-      x: "-110vh",
+      zIndex: 0,
+      opacity: 0,
     },
   };
-  const item = {
-    show: { height: "auto", x: 0, opacity: 1, transition: { duration: 0.3 } },
-    hidden: { x: "-50vh", opacity: 0 },
-  };
+
   return (
     <motion.div
       variants={cont}
@@ -49,7 +48,7 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
       className="modal-menu"
     >
       {links.map((l, i) => (
-        <motion.div key={i} variants={item} className="text-3xl mb-5">
+        <motion.div key={i} className="text-3xl mb-5">
           <Anchor
             onClick={() => {
               setShowMenu(false);
@@ -61,12 +60,13 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
           </Anchor>
         </motion.div>
       ))}
-      <motion.div key={11} variants={item} className="mb-auto">
+      <motion.div key={11} className="">
         <ConnectWallet />
       </motion.div>
-      <motion.div key={12} variants={item} className="  ">
-        <Socials big />{" "}
+      <motion.div key={12} className="  ">
+        <Socials big modal />{" "}
       </motion.div>
+      <img className="block " src="/imgs/dfinity.png" alt="dfinity blockchain" />
     </motion.div>
   );
 }

@@ -11,8 +11,7 @@ export default function Header({
   showPopup,
   setShowPopup,
   userAddress,
-  connectWallet,
-  connectStoic,
+  setUserAddress,
   showMenu,
   setShowMenu,
   scrolled,
@@ -56,8 +55,7 @@ export default function Header({
               showPopup={showPopup}
               setShowPopup={setShowPopup}
               header
-              connectStoic={connectStoic}
-              connectWallet={connectWallet}
+              setUserAddress={setUserAddress}
               userAddress={userAddress}
             />
           )}

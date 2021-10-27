@@ -6,8 +6,7 @@ export default function HeroSection({
   showPopup,
   setShowPopup,
   userAddress,
-  connectStoic,
-  connectWallet,
+  setUserAddress,
 }) {
   const { scrollYProgress } = useViewportScroll();
 
@@ -27,8 +26,7 @@ export default function HeroSection({
         <WelcomeTo
           showPopup={showPopup}
           setShowPopup={setShowPopup}
-          connectStoic={connectStoic}
-          connectWallet={connectWallet}
+          setUserAddress={setUserAddress}
           userAddress={userAddress}
         />
         <motion.img

@@ -31,38 +31,6 @@ export default function App() {
   });
   //connect wallet functions
   const [userAddress, setUserAddress] = useState("");
-  const connectWallet = async (e) => {
-    if (window) {
-      // Canister Ids
-      const nnsCanisterId = "qoctq-giaaa-aaaaa-aaaea-cai";
-
-      // Whitelist
-      const whitelist = [nnsCanisterId];
-
-      // Make the request
-      const isConnected =
-        window &&
-        (await window.ic.plug.requestConnect({
-          whitelist,
-        }));
-
-      // Get the user principal id
-      const principalId = window && (await window.ic.plug.agent.getPrincipal());
-
-      setUserAddress(principalId.toText());
-
-      console.log(`Plug's user principal Id is ${principalId}`);
-    }
-  };
-
-  const connectStoic = async (StoicIdentity) => {
-    if (window) {
-      await StoicIdentity.load();
-      let identity = await StoicIdentity.connect();
-      setUserAddress(identity.getPrincipal().toText());
-      console.log(identity.getPrincipal().toText());
-    }
-  };
   const [showPopup, setShowPopup] = useState(false);
   return (
     <div className=" relative overflow-hidden app">
@@ -72,8 +40,7 @@ export default function App() {
       <Header
         showPopup={showPopup}
         setShowPopup={setShowPopup}
-        connectStoic={connectStoic}
-        connectWallet={connectWallet}
+        setUserAddress={setUserAddress}
         userAddress={userAddress}
         showMenu={showMenu}
         setShowMenu={setShowMenu}
@@ -83,8 +50,7 @@ export default function App() {
       <HeroSection
         showPopup={showPopup}
         setShowPopup={setShowPopup}
-        connectStoic={connectStoic}
-        connectWallet={connectWallet}
+        setUserAddress={setUserAddress}
         userAddress={userAddress}
       />
 
@@ -101,8 +67,7 @@ export default function App() {
       <Footer
         showPopup={showPopup}
         setShowPopup={setShowPopup}
-        connectStoic={connectStoic}
-        connectWallet={connectWallet}
+        setUserAddress={setUserAddress}
         userAddress={userAddress}
       />
 

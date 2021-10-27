@@ -8,8 +8,7 @@ import ConnectWallet from "./ConnectWallet";
 export default function WelcomeTo({
   setShowPopup,
   showPopup,
-  connectStoic,
-  connectWallet,
+  setUserAddress,
   userAddress,
 }) {
   const cont = {
@@ -38,18 +37,22 @@ export default function WelcomeTo({
       <motion.div
         variants={item}
         key={5}
-        className="w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 "
+        className="w-full flex flex-col custom-grid gap-2 xl:gap-4 "
       >
         <ConnectWallet
           showPopup={showPopup}
           setShowPopup={setShowPopup}
-          connectStoic={connectStoic}
-          connectWallet={connectWallet}
+          setUserAddress={setUserAddress}
           userAddress={userAddress}
         />
         <a href="https://discord.com">
-          <button className="btn join-discord"> Join The Discord</button>
+          <button className="btn join-discord w-full"> Join The Discord</button>
         </a>
+        <img
+          className="block w-1/3 lg:w-full mx-auto "
+          src="/imgs/dfinity.png"
+          alt="dfinity blockchain"
+        />
       </motion.div>
     </motion.div>
   );
