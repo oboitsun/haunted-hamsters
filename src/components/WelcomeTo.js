@@ -38,7 +38,7 @@ export default function WelcomeTo({
       <motion.div
         variants={item}
         key={5}
-        className="w-full flex flex-col lg:flex-row gap-8 "
+        className="w-full flex flex-col lg:grid lg:grid-cols-2 gap-8 "
       >
         <ConnectWallet
           showPopup={showPopup}
