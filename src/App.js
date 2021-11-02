@@ -8,7 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ModalMenu from "./components/ModalMenu";
 import ComingSoonPopUp from "./components/ComingSoonPopUp";
-
+import Roadmap2 from "./components/Roadmap2";
 import AboutHamsters from "./components/AboutHamsters";
 import Roadmap from "./components/Roadmap";
 import Ghost from "./components/Ghost";
@@ -59,7 +59,8 @@ export default function App() {
         <EndlessHamsters />
         <Web />
       </div>
-      <Roadmap />
+      <Roadmap2 />
+      {/* <Roadmap /> */}
       <Team />
 
       <FAQ />

@@ -1,9 +1,9 @@
 import React from "react";
-import Button from "./Button";
 import { motion } from "framer-motion";
 import Timer from "./Timer";
 // import dynamic from "next/dynamic";
 import ConnectWallet from "./ConnectWallet";
+
 // const DynamicComponent = dynamic(() => import("./ConnectWallet"), { ssr: false });
 export default function WelcomeTo({
   setShowPopup,
@@ -37,23 +37,30 @@ export default function WelcomeTo({
       <motion.div
         variants={item}
         key={5}
-        className="w-full flex flex-col custom-grid gap-2 xl:gap-4 "
+        className="w-full flex flex-col  gap-2 xl:gap-4 "
       >
-        <ConnectWallet
-          showPopup={showPopup}
-          setShowPopup={setShowPopup}
-          setUserAddress={setUserAddress}
-          userAddress={userAddress}
-        />
-        <a href="https://discord.com">
-          <button className="btn join-discord w-full"> Join The Discord</button>
-        </a>
-        <img
-          className="block w-1/3 lg:w-full mx-auto "
-          src="/imgs/dfinity.png"
-          alt="dfinity blockchain"
-        />
+        <div className="w-full lg:w-4/5 mx-auto pb-5">
+          <ConnectWallet />
+        </div>
+        <div className="flex items-center mx-auto">
+          <a href="https://discord.gg/DtSF7SGK">
+            <button className="btn join-discord w-full"> Join The Discord</button>
+          </a>
+          <img
+            className="block max-w-min ml-5  lg:ml-4 "
+            src="/imgs/dfinity.png"
+            alt="dfinity blockchain"
+          />
+        </div>
       </motion.div>
+      <div
+        onClick={() => {
+          setShowPopup(true);
+        }}
+        className="w-full text-white text-center hover:underline cursor-pointer pt-5"
+      >
+        Check out the Rarity Traits!
+      </div>
     </motion.div>
   );
 }

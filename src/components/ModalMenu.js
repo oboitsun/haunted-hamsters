@@ -45,7 +45,7 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
       variants={cont}
       initial="hidden"
       animate={showMenu ? "show" : "hidden"}
-      className="modal-menu"
+      className={`modal-menu ${showMenu ? "" : "pointer-events-none"}`}
     >
       {links.map((l, i) => (
         <motion.div key={i} className="text-3xl mb-5">

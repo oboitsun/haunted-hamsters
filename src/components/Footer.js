@@ -40,7 +40,7 @@ export default function Footer({ showPopup, setShowPopup, userAddress, setUserAd
             </p>
           </div>
 
-          <div className="hidden lg:flex text-xs xl:text-base font-bold lg:gap-8 xl:gap-10 items-center">
+          <div className="hidden lg:flex text-xs xl:text-base font-bold lg:gap-8  items-center">
             {links.map((l, i) => (
               <Anchor key={i} to={l.href} {...linkProps}>
                 {l.text}

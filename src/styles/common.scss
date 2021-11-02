@@ -1,7 +1,7 @@
 @import "./variables.scss";
 .app {
   .logo {
-    width: 100px;
+    width: 140px;
   }
   .btn {
     display: block;
@@ -56,7 +56,7 @@
   }
 
   .anchor {
-    @apply cursor-pointer  font-bold  transform transition-all;
+    @apply cursor-pointer  font-bold  transform transition-all min-w-max;
   }
   .anchor:hover {
     color: $dark-khaki;
